@@ -2,7 +2,7 @@
 #Original author: https://gist.github.com/ageitgey
 #Modified: smartbuilds.io
 
-import face_recognition
+import face_recognition # type: ignore
 import cv2
 import numpy as np
 

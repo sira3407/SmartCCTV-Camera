@@ -4,7 +4,16 @@
 #code of the orginal Ageitgey (GitHub) face recognition demo to include multiple faces.
 #Simply add the your desired 'passport-style' face to the 'profiles' folder.
 
-import face_recognition
+try:
+    import face_recognition # type: ignore
+except ImportError:
+    print("Please install the face_recognition library.")
+    # You can install it using pip:
+    # !pip install face_recognition
+    # or conda:
+    # !conda install -c conda-forge face_recognition
+    # or refer to the face_recognition documentation for installation instructions.
+    exit(1)
 import cv2
 import numpy as np
 import os
